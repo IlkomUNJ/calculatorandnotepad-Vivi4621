@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<!--    App Bar-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Notepad"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@android:drawable/ic_menu_revert"
+        app:navigationContentDescription="Back">
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="8dp"
+        android:text="Style"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/transparent"/>
+
+<!--    Style-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/styleOptions"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#f5f5f5"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnBold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="Bold"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnItalic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="Italic"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/btnNormal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:text="Normal" />
+
+    </LinearLayout>
+
+<!--    Text Size-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#f0f0f0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text Size:"
+            android:textSize="14sp"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnDecreaseSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="16sp"
+            android:layout_margin="4dp" />
+
+        <TextView
+            android:id="@+id/tvTextSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16sp"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_gravity="center_vertical" />
+
+        <Button
+            android:id="@+id/btnIncreaseSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textSize="16sp"
+            android:layout_margin="4dp" />
+
+    </LinearLayout>
+
+<!--    Text Editor-->
+    <EditText
+        android:id="@+id/etEditor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="Ketik..."
+        android:padding="16dp"
+        android:background="@android:color/white"
+        android:textSize="16sp"
+        android:minHeight="200dp"
+        android:inputType="textMultiLine|textCapSentences"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
